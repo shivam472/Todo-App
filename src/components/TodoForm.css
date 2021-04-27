@@ -1,0 +1,27 @@
+.todo-form {
+  width: 100%;
+  height: 5rem;
+  margin-top: 3rem;
+}
+
+.todo-form input {
+  font-size: large;
+  padding: 5px 0 5px 3px;
+  margin-right: 8px;
+}
+
+.todo-form input:focus {
+  outline: none;
+}
+
+.todo-form button {
+  padding: 10px 25px 7px 25px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-form button:focus {
+  outline: none;
+}

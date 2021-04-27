@@ -1,0 +1,71 @@
+.todo-items {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0093e9;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(0, 191, 165, 1) 11.2%,
+    rgba(0, 140, 122, 1) 100.2%
+  );
+  width: 90%;
+  padding: 0.6rem 0 0.6rem 0.6rem;
+  margin: 0.5rem 0;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.2);
+  font-size: x-large;
+}
+
+.todo-item {
+  color: white;
+}
+
+.todo-item__striked {
+  color: white;
+}
+
+.close::before {
+  content: "x";
+  color: black;
+  font-weight: 300;
+  font-size: 6mm;
+  margin-right: 1rem;
+  font-family: Arial, sans-serif;
+  display: none;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.todo-items:hover .close::before {
+  display: block;
+}
+
+.cross-line {
+  position: absolute;
+  top: 25px;
+  width: 10rem;
+  height: 2.5px;
+  background-color: white;
+  animation-name: strike;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes strike {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  .close::before {
+    display: block;
+  }
+}
